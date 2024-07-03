@@ -1,4 +1,6 @@
 
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap');
+
 @font-face {
     font-family: 'CustomFont';
     src: url('img/AbhayaLibre-Bold.ttf') format('woff2');
@@ -11,9 +13,17 @@
     --bereagray:#6D6E71;
   }
 
+  body{
+    background-image: url(img/DSC_0154.jpg);
+    background-attachment: fixed;
+    background-repeat: no-repeat;
+    background-size: cover;
+  }
 
-*{
-    font-family:'CustomFont' ;
+a{
+font-family: "Montserrat", sans-serif;
+  font-optical-sizing: auto;
+  font-style: normal;
 }
 
 header{
@@ -21,6 +31,9 @@ header{
     width: 100%;
     background-color: var(--Bereablue);
     color: #ffffff;
+}
+header h1{
+    font-family: "CustomFont" , sans-serif;
 }
 .logo  {
     display: flex;
@@ -61,9 +74,45 @@ header{
 /* HOTTEST */
 .hottest{
     background-color: red;
+    font-family:  "Montserrat", sans-serif;
     text-align: center;
+    color: white;
     padding: 5px;
 }
+
+
+
+.imgcon {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-top: 30px;
+}
+
+.imgcon button{
+    border-radius: 50%;
+    padding: 15px;
+
+    border: none;
+    background:rgba(66, 64, 64, 0.5)
+}
+
+.imgcon img {
+    transition: transform 0.7s ease-in-out, box-shadow 0.7s ease-in-out;
+    margin-left: 15px;
+    margin-right: 15px;
+}
+
+.imgcon img.pop {
+    transform: scale(1.2); /* Bigger scale for the popping effect */
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
+}
+
+.imgcon img.lesspop {
+    transform: scale(1.05); /* Slightly bigger but less than the pop class */
+}
+
+
 
 /* search bar and the rest */
 .glassy-title {
@@ -101,7 +150,7 @@ header{
   #myInput {
       background-position: 10px 12px; 
       background-repeat: no-repeat;
-      width: 80%; 
+      width: 50%; 
       font-size: 16px; 
       padding: 12px 20px 12px 40px; 
       border: 1px solid #ddd; 
@@ -145,13 +194,13 @@ header{
     justify-content: center;
     text-align: center;
     position: relative;
-    background-size: cover;
+    background-size: contain;
     border: 1px solid black;
     /* border-radius: 20px; */
     padding: 5px;
     margin: 5px;
     width: 30%;
-    height: 300px; /* Set a fixed height */
+    height: 350px; /* Set a fixed height */
     transition: 0.5s;
     overflow: hidden; /* Ensure child elements don't overflow */
   }
@@ -184,3 +233,17 @@ header{
     padding: 5px; /* Optional: Add padding for better readability */
     border-radius: 5px; /* Optional: Add border radius for better aesthetics */
   }
+
+  footer{
+ 
+    background-color: var(--Bereablue);
+    margin-top: 10px;
+    color: var(--white);
+    display: flex;
+    padding: 10px;
+    margin: 5px;
+    font-family: "Montserrat", sans-serif;
+    font-optical-sizing: auto;
+    font-weight: 600;
+    font-style: normal;
+}

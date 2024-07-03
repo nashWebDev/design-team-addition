@@ -1,10 +1,10 @@
-document.addEventListener("DOMContentLoaded",function(){
-    var username = document.getElementById("user")
-    var valsFromLoginForm = JSON.parse(localStorage.getItem("loginFormvalsForBookingSystem"))
+// document.addEventListener("DOMContentLoaded",function(){
+//     var username = document.getElementById("user")
+//     var valsFromLoginForm = JSON.parse(localStorage.getItem("loginFormvalsForBookingSystem"))
 
 
-    username.innerHTML = valsFromLoginForm.user;
-})
+//     username.innerHTML = valsFromLoginForm.user;
+// })
 
 
 
@@ -133,4 +133,41 @@ var booksArray = [
             }
         }
     }
-    
+
+// carasol 
+
+var imageArray = [
+    "img/pjLightning.jfif",
+    "img/pjSea.jfif",
+    "img/pjLastoly.jfif",
+    "img/pj4.jfif",
+    "img/pj5.jfif"
+];
+
+function moveCassarol() {
+    let imgout = imageArray.pop();
+    imageArray.unshift(imgout);
+
+    let imgElements = document.querySelectorAll(".imgcon img");
+
+    imgElements.forEach((img, index) => {
+        img.src = imageArray[index];
+        img.className = ''; // Reset classes
+        if (index === Math.floor(imgElements.length / 2)) {
+            img.classList.add('pop');
+        } else if (index === Math.floor(imgElements.length / 2) - 1 || index === Math.floor(imgElements.length / 2) + 1) {
+            img.classList.add('lesspop');
+        }
+    });
+}
+
+// Set the initial state
+document.addEventListener("DOMContentLoaded", function() {
+    moveCassarol();
+    setInterval(moveCassarol, 3000); // Automatically move the carousel every 3 seconds
+});
+
+
+
+
+//catalogue 2 for the actual catalogue 

@@ -20,6 +20,7 @@ header{
     
     width: 100%;
     background-color: var(--Bereablue);
+    color:white;
 }
 .logo  {
     display: flex;

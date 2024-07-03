@@ -28,7 +28,7 @@ var log2 = document.getElementById("log2")
             }, 0); // Set the timeout to 0 to start the transition immediately
             
             setTimeout(function() {
-                window.location.href = 'seachpage.htm'; // Navigate to the new page after the transition
+                window.location.href = 'home.htm'; // Navigate to the new page after the transition
             }, 900); // Delay the navigation to allow the fade-out effect to complete
         } else {
             alert("Email is not officially registered by Berea");
@@ -56,7 +56,7 @@ log2.addEventListener("submit",function(event){
         }, 0); // Set the timeout to 0 to start the transition immediately
         
         setTimeout(function() {
-            window.location.href = 'home.htm'; // Navigate to the new page after the transition
+            window.location.href = 'seachpage.htm'; // Navigate to the new page after the transition
         }, 900); // Delay the navigation to allow the fade-out effect to complete
     } else {
         alert("Email is not officially registered by Berea");

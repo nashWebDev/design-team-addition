@@ -1,0 +1,86 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>application form</title>
+    <link rel="stylesheet" href="applicationForm.css">
+    <script src="https://printjs-4de6.kxcdn.com/print.min.js"></script>
+    <script src="https://printjs-4de6.kxcdn.com/print.min.css"></script>
+    
+    
+</head>
+<body>
+
+<header>
+    <h1>Application for renting of <span class="formH"></span></h1>
+</header>
+
+
+<div id="begone">
+
+<div id="stateofBook">
+    <div class="box">
+        <h3>book is avalible/unavailble</h3> 
+    </div>
+</div>
+
+
+
+
+<div class="mainview">
+    <section>
+        <div class="loginBox">
+        <h4>please full in correct details</h4>
+            <form onkeyup="autofiller()">
+                <input type="text" placeholder="name" id="name" required><br>
+                <input type="text" placeholder =" studentId" id="studentId" required><br>
+                <input type="text" placeholder="email" id="email" required><br>
+                <input type="text" placeholder="bookname" id="bookname" title="bookname" disabled><br>
+                <label for="">campus</label>
+                <input type="radio" name="campus" value="btc" id="btc" onclick="autofiller()">btc</input>
+                <input type="radio" name="campus" value="bct" id="bct" onclick="autofiller()">bct</input><br>
+               <div><p>PICKUPDATE <input type="date" id="rentDate" onclick="autofiller()" required></p></div><br>
+               <div><p>RETURN DATE<input type="date" id="returnDate" onclick="autofiller()" required></p></div><br>
+
+                <a href="#btn2"><input type="submit" class="btn"  value="submit"></a>
+            </form>
+        </div>
+    </section>
+
+    <section id="s2">
+        <img src="" alt=" book title">
+    </section>
+</div><br>
+
+</div>
+
+<div id="revealafter"> <!-- -->
+
+    <div id="appStatus">
+        <h1>application successful</h1>
+    </div>
+
+    <div class="center">
+        <div class="receipt" id="printJS-form">
+            <h3 class="center"><span class="formH">book name</span> </h3>
+        <p class="textbox" id="prtname">Name :  </p>
+        <p class="textbox" id="prtStudentId">studentId :  </p>
+        <p class="textbox" id="prtEmail">email :  </p>
+        <p class="textbox" id="prtcampus">campus :  </p>
+        <p class="textbox" id="prtRentDate">rentDate :  </p>
+        <p class="textbox" id="prtReturnDate">returnDate :  </p>
+
+
+        </div>
+
+    </div>
+    <div class="center">
+        <button id="btn2" onclick="printJS('printJS-form', 'html')"> get a Print out of receipt</button>
+    </div>
+</div>
+
+    
+<script src="print.js"></script>
+<script src="applicationForm.js"></script>
+</body>
+</html>

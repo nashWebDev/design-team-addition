@@ -14,7 +14,7 @@
   }
 
   body{
-    background-image:url(img/BGC\ App\ Background.jpg);
+    background-image:url(img/BGCAppBackground3.jpg);
     background-attachment: fixed;
     background-repeat: no-repeat;
     background-size: cover;
@@ -87,6 +87,7 @@ header h1{
     align-items: center;
     justify-content: center;
     margin-top: 30px;
+    
 }
 
 .imgcon button{
@@ -160,7 +161,7 @@ header h1{
   #myInput:placeholder-shown{
   
       align-items: center;
-      text-align: center;
+      
   }
   
   .grayoverlay{

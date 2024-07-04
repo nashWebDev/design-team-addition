@@ -73,6 +73,7 @@ var booksArray = [
         h4.innerHTML = book.title;
     
         var catalogueBox = document.getElementById("catalogue");
+        catalogueBox.classList.add("grayoverlay")
     
         var a = document.createElement("a");
     

@@ -95,7 +95,7 @@ header h1{
     padding: 15px;
 
     border: none;
-    background:rgba(66, 64, 64, 0.5)
+    background:rgba(255, 255, 255, 0.7)
 }
 
 .imgcon img {
@@ -236,6 +236,50 @@ header h1{
     padding: 5px; /* Optional: Add padding for better readability */
     border-radius: 5px; /* Optional: Add border radius for better aesthetics */
   }
+
+/* factuties */
+
+.row {
+  display: flex;
+  align-items: center;
+  width: fit-content;
+  background-image: url(img/Pattern.png);
+  margin: 0;
+  transition: all 2s;
+}
+
+.sidehead {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 25%;
+  height: 100%;
+  background: black;
+  color: white;
+}
+
+.bookslide {
+  display: none;
+  justify-content: center;
+  width: 0; /* Initial width set to 0 */
+  height: 50%;
+  transition: all 2s; /* Ensure smooth transition */
+}
+
+.bookslide img {
+  margin: 5px;
+}
+
+.facbtn {
+  display: flex;
+  justify-content: flex-end;
+  
+
+  width: 0; /* Initial width set to 0 */
+  transition: all 2s; /* Ensure smooth transition */
+}
+
+
 
   footer{
  

@@ -107,6 +107,9 @@ var booksArray = [
         booksArray.forEach(function(book) {
             search(book);
         });
+        rollout()
+
+       // setTimeout(rollout, 2500);
        
     });
     
@@ -171,4 +174,24 @@ document.addEventListener("DOMContentLoaded", function() {
 
 
 
-//catalogue 2 for the actual catalogue 
+//faculatiy
+function rollout() {
+    var row = document.getElementsByClassName("row")
+    var facultyContent = document.getElementsByClassName("bookslide");
+    var facultybtn = document.getElementsByClassName("facbtn");
+
+    for (var i = 0; i < facultybtn.length; i++) {
+        facultybtn[i].style.display = "flex";
+        facultybtn[i].style.width = "25%"; 
+    }
+
+    for (var j = 0; j < facultyContent.length; j++) {
+        facultyContent[j].style.display = "flex";
+        facultyContent[j].style.width = "50%";
+    }
+
+    for (var k = 0; k < row.length; k++) {
+        row[k].style.width = "100%"
+    }
+
+}

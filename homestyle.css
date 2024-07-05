@@ -239,12 +239,17 @@ header h1{
 
 /* factuties */
 
+.spacer{
+  margin: 2%;
+}
+
 .row {
   display: flex;
+  margin-top: 2%;
+  margin-bottom: 2%;
+  width: 100%;
   align-items: center;
-  width: fit-content;
-  background-image: url(img/Pattern.png);
-  margin: 0;
+  background-image: linear-gradient( 90deg, rgb(0, 0, 255) , rgb(4, 192, 255 ,0.337)), url(img/Pattern.png);
   transition: all 2s;
 }
 
@@ -254,14 +259,13 @@ header h1{
   align-items: center;
   width: 25%;
   height: 100%;
-  background: black;
   color: white;
 }
 
 .bookslide {
-  display: none;
+  display: flex;
+  width: 50%;
   justify-content: center;
-  width: 0; /* Initial width set to 0 */
   height: 50%;
   transition: all 2s; /* Ensure smooth transition */
 }
@@ -272,11 +276,18 @@ header h1{
 
 .facbtn {
   display: flex;
-  justify-content: flex-end;
-  
-
-  width: 0; /* Initial width set to 0 */
+  justify-content: center;
+  width: 25%; /* Initial width set to 0 */
   transition: all 2s; /* Ensure smooth transition */
+}
+
+.facbtn button{
+  border: none;
+  background-color: rgba(255, 255, 255, 0.623);
+  border-radius: 40px;
+  color: black;
+  text-shadow: 0 1px 1px 1px black;
+  padding: 20px;
 }
 
 

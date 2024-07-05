@@ -208,6 +208,10 @@ header a:hover {
   padding: 20px;
 }
 
+.line{
+  border-left: 3px solid white;
+  padding-left: 5px;
+}
 
 
   footer{

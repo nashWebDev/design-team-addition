@@ -18,6 +18,7 @@
     background-attachment: fixed;
     background-repeat: no-repeat;
     background-size: cover;
+    margin: 0px;
   }
 
 a{
@@ -27,13 +28,24 @@ font-family: "Montserrat", sans-serif;
 }
 
 header{
-    
+    margin: 0px;
     width: 100%;
     background-color: var(--Bereablue);
     color: #ffffff;
+
+
 }
 header h1{
     font-family: "CustomFont" , sans-serif;
+}
+
+header a{
+      transition: transform 1s ease;
+}
+
+header a:hover {
+  transform: translateY(-10px);
+  text-decoration: none;
 }
 .logo  {
     display: flex;
@@ -77,6 +89,8 @@ header h1{
     font-family:  "Montserrat", sans-serif;
     text-align: center;
     color: white;
+    margin-left: 0px;
+    margin-right: 0px;
     padding: 5px;
 }
 
@@ -299,9 +313,19 @@ header h1{
     color: var(--white);
     display: flex;
     padding: 10px;
-    margin: 5px;
     font-family: "Montserrat", sans-serif;
     font-optical-sizing: auto;
     font-weight: 600;
     font-style: normal;
+
+
+}
+
+footer a{
+      transition: transform 0.5s ease;
+}
+
+footer a:hover {
+  transform: translateY(-10px);
+  text-decoration: none;
 }

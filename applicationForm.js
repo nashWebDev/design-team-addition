@@ -61,6 +61,39 @@ function autofiller(){
 }
 
 
+// function formfill(){
+//     var prtname, prtstudentID, prtemail , prtcampus , prtrentdate,bookSeleted ;
+//     var bookTITLE = JSON.parse(localStorage.getItem("booktitle"))
+//         prtname = document.getElementById("sname")
+//         prtstudentID = document.getElementById("sstudentId")
+//         prtemail = document.getElementById("semail")
+//         prtcampus = document.getElementById("campused")
+//         bookSeleted = document.getElementById("sbookname")
+//         prtrentdate = document.getElementById("srentDate")
+
+//             prtname.value =Fname.value;
+//             prtstudentID.value =  studId.value;
+//             prtemail.value =  email.value;
+
+//                 if (btc.checked) {
+                    
+//                     prtcampus.value = " btc";
+//                 } else if (bct.checked) {
+                
+//                     prtcampus.value = " bct";
+//                 }
+//                 rentdate.value = document.getElementById("rentDate").value
+//                 bookSeleted.value = bookTITLE.title
+
+//                 prtrentdate.value = + rentdate;
+        
+
+
+// }
+
+
+
+
 function dataValidation(rentDate, returnDate) {
     // Create Date objects from the input values
     let pickupcal = new Date(rentDate);
@@ -84,23 +117,69 @@ function dataValidation(rentDate, returnDate) {
     }
 
 }
+var send = document.getElementById("sub")
+var altsend = document.getElementById("sendto")
+
+
+function formfill() {
+    // Get user input from custom form
+    const name = document.getElementById('name').value;
+    const studentId = document.getElementById('studentId').value;
+    const email = document.getElementById('email').value;
+    const bookname = document.getElementById('bookname').value;
+    const campus = document.querySelector('input[name="campus"]:checked').value;
+    const rentDate = document.getElementById('rentDate').value;
+
+    // Get iframe and its document
+    const iframe = document.getElementById('googleForm');
+    const iframeDoc = iframe.contentDocument || iframe.contentWindow.document;
+
+    // Find the input fields in the Google Form iframe
+    // Replace entry.XXXXXX with actual entry IDs from the Google Form
+    const googleNameField = iframeDoc.querySelector('input[name="entry.825025494"]'); // Replace with actual entry ID
+    const googleStudentIdField = iframeDoc.querySelector('input[name="entry.1500682795"]'); // Replace with actual entry ID
+    const googleEmailField = iframeDoc.querySelector('input[name="entry.51807876"]'); // Replace with actual entry ID
+    const googleBooknameField = iframeDoc.querySelector('input[name="entry.342186377"]'); // Replace with actual entry ID
+    const googleCampusField = iframeDoc.querySelector('input[name="entry.418446264"][value="' + campus + '"]'); // Replace with actual entry ID
+    const googleRentDateField = iframeDoc.querySelector('input[name="entry.1820651005"]'); // Replace with actual entry ID
+
+    // Set the values of the Google Form fields
+    googleNameField.value = name;
+    googleStudentIdField.value = studentId;
+    googleEmailField.value = email;
+    googleBooknameField.value = bookname;
+    googleCampusField.checked = true;
+    googleRentDateField.value = rentDate;
+
+    // Find the submit button and click it
+    const submitButton = iframeDoc.querySelector('form').querySelector('input[type="submit"]');
+    submitButton.click();
+}
+
+
+
+
 
 // Prevent submit and validate dates
-document.addEventListener("submit", function(event){
-    event.preventDefault();
+// send.addEventListener("submit", function(event){
+//     event.preventDefault();
 
-    let bookRented = false;
-    if (bookRented) {
-        alert("Book is currently being rented, will be available by return date");
-    }
+//     let bookRented = false;
+//     if (bookRented) {
+//         alert("Book is currently being rented, will be available by return date");
+//     }
 
-    let rentDate = document.getElementById("rentDate").value;
-    let returnDate = document.getElementById("returnDate").value;
+//     let rentDate = document.getElementById("rentDate").value;
+//     let returnDate = document.getElementById("returnDate").value;
 
-    dataValidation(rentDate, returnDate);
+//     dataValidation(rentDate, returnDate);
+
+//     autofiller()
 
 
-});
+
+
+// });
 
 
 

@@ -1,6 +1,8 @@
-.seachbox{
-    margin-top: 5%;    
+h1{
+  text-align: center;
 }
+
+
 
 #fullSearch{
   border: 2px solid black;
@@ -23,7 +25,7 @@
     font-size: 16px; 
     padding: 12px 20px 12px 40px; 
     border: 1px solid #ddd; 
-    margin-bottom: 12px; 
+    
 }
 
 #myInput:placeholder-shown{
@@ -50,8 +52,7 @@
   flex-wrap: wrap;
   justify-content: space-evenly;
   margin-top: 10%;
-  margin: 5px;
-  width: 50%;
+  width: 100vw;
   z-index: 1000;
 }
 
@@ -70,8 +71,11 @@
   /* border-radius: 20px; */
   padding: 5px;
   margin: 5px;
-  width: 30%;
-  height: 350px; /* Set a fixed height */
+  width: 40vh;
+  height: 60vh;
+  background-size: cover;
+  background-repeat: no-repeat;
+  /*height: 350px;  Set a fixed height */
   transition: 0.5s;
   overflow: hidden; /* Ensure child elements don't overflow */
 }
@@ -81,8 +85,8 @@
   position: absolute;
   top: 0;
   left: 0;
-  width: 100%;
-  height: 100%;
+  /* width: 100%;
+  height: 100%; */
   background-image: inherit; /* Inherit the background image from parent */
   backdrop-filter: blur(10px); /* Apply blur effect to the pseudo-element */
   z-index: -1; /* Ensure the pseudo-element is behind other content */

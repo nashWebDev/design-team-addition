@@ -107,7 +107,7 @@ var booksArray = [
                 listArray(book);
                 maxResults++;
             }
-            if (maxResults === 6) {
+            if (maxResults === 60) {
                 break;
             }
         }

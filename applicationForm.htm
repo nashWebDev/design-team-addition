@@ -18,32 +18,23 @@
 
 <div id="begone">
 
-<div id="stateofBook">
-    <div class="box">
-        <h3>book is avalible/unavailble</h3> 
-    </div>
-</div>
-
-
-
-
 <div class="mainview">
     <section>
         <div class="loginBox">
         <h4>please full in correct details</h4>
-            <form onkeyup="autofiller()">
+            <div >
                 <input type="text" placeholder="name" id="name" required><br>
                 <input type="text" placeholder =" studentId" id="studentId" required><br>
                 <input type="text" placeholder="email" id="email" required><br>
-                <input type="text" placeholder="bookname" id="bookname" title="bookname" disabled><br>
+                <input type="text" placeholder="bookname" id="bookname" title="bookname" ><br>
                 <label for="">campus</label>
-                <input type="radio" name="campus" value="btc" id="btc" onclick="autofiller()">btc</input>
-                <input type="radio" name="campus" value="bct" id="bct" onclick="autofiller()">bct</input><br>
-               <div><p>PICKUPDATE <input type="date" id="rentDate" onclick="autofiller()" required></p></div><br>
-               <div><p>RETURN DATE<input type="date" id="returnDate" onclick="autofiller()" required></p></div><br>
+                <input type="radio" name="campus" value="btc" id="btc" >btc</input>
+                <input type="radio" name="campus" value="bct" id="bct">bct</input><br>
+               <div><p>PICKUPDATE <input type="date" id="rentDate"  required></p></div><br>
+               <div><p>RETURN DATE<input type="date" id="returnDate"  required></p></div><br>
 
-                <a href="#btn2"><input type="submit" class="btn"  value="submit"></a>
-            </form>
+                <input type="button" class="btn" id="sub" onclick="formfill()"  value="submit">
+            </div>
         </div>
     </section>
 
@@ -54,35 +45,13 @@
 
 </div>
 
-<div id="revealafter"> <!-- -->
 
-    <div id="appStatus">
-        <h1>application successful</h1>
-    </div>
+<div class="gone">
 
-    <div class="center">
-        <div class="receipt" id="printJS-form">
-            <h3 class="center"><span class="formH">book name</span> </h3>
-        <p class="textbox" id="prtname">Name :  </p>
-        <p class="textbox" id="prtStudentId">studentId :  </p>
-        <p class="textbox" id="prtEmail">email :  </p>
-        <p class="textbox" id="prtcampus">campus :  </p>
-        <p class="textbox" id="prtRentDate">rentDate :  </p>
-        <p class="textbox" id="prtReturnDate">returnDate :  </p>
-
-
-        </div>
-
-    </div>
-    <div class="center">
-        <button id="btn2" onclick="printJS('printJS-form', 'html')"> get a Print out of receipt</button>
-    </div>
 </div>
 
 
 
-<iframe src="https://docs.google.com/forms/d/e/1FAIpQLSePKx9zlejPMM3lOsBnPjju12Xw57-I4jgBNN_cJtxHSOd77w/viewform?embedded=true" width="640" height="450" frameborder="0" marginheight="0" marginwidth="0">Loading…</iframe>
-    
 <script src="print.js"></script>
 <script src="applicationForm.js"></script>
 </body>

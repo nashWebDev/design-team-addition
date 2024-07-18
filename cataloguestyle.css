@@ -1,7 +1,84 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap');
+
+@font-face {
+    font-family: 'CustomFont';
+    src: url('img/AbhayaLibre-Bold.ttf') format('woff2');
+  font-weight: bold;
+  font-style: normal;
+}
+:root {
+    --Bereablue: #27348b;
+    --white: #ffffff;
+    --bereagray:#6D6E71;
+  }
+
+
+
 h1{
   text-align: center;
 }
 
+a{
+  font-family: "Montserrat", sans-serif;
+    font-optical-sizing: auto;
+    font-style: normal;
+  }
+  
+  header{
+      margin: 0px;
+      width: 100%;
+      background-color: var(--Bereablue);
+      color: #ffffff;
+  
+  
+  }
+  header h1{
+      font-family: "CustomFont" , sans-serif;
+  }
+  
+  header a{
+        transition: transform 1s ease;
+  }
+  
+  header a:hover {
+    transform: translateY(-10px);
+    text-decoration: none;
+  }
+  .logo  {
+      display: flex;
+      justify-content: flex-start;
+      align-items: center;
+  }
+  
+  .logo img{
+      clip-path: circle();
+      width: 80px;
+      height: 80px;
+  }
+  
+  .centerbox{
+      display: flex;
+      align-items: center;
+      margin-left: 25%;
+      margin-right: 25%;
+      width: 50%;
+  }
+  .centerbox h1{
+      width: fit-content;
+  }
+  
+  .centerbox nav{
+      width: 100%;
+      display: flex;
+      justify-content: flex-end;
+  }
+  .centerbox nav a{
+      padding: 5px;
+      margin: 5px;
+      text-decoration: none;
+      color: white;
+  
+  }
 
 
 #fullSearch{
@@ -72,18 +149,19 @@ h1{
   /* border-radius: 20px; */
   padding: 5px;
   margin: 5px;
-  width: 30%;
+  width: max-content;
   height: 40%;
   background-size: cover;
   background-repeat: no-repeat;
   /*height: 350px;  Set a fixed height */
   transition: 0.5s;
-  overflow: hidden; /* Ensure child elements don't overflow */
+
+  
 }
 
 .catalogue a img{
-  width: 30vh;
-  height: 40vh;
+  width: 40vh;
+  height: 50vh;
 }
 
 
@@ -132,3 +210,28 @@ h1{
 .catalogue a:hover h4{
   bottom: -100%;
 } */
+
+
+footer{
+ 
+  background-color: var(--Bereablue);
+  margin-top: 10px;
+  color: var(--white);
+  display: flex;
+  padding: 10px;
+  font-family: "Montserrat", sans-serif;
+  font-optical-sizing: auto;
+  font-weight: 600;
+  font-style: normal;
+
+
+}
+
+footer a{
+    transition: transform 0.5s ease;
+}
+
+footer a:hover {
+transform: translateY(-10px);
+text-decoration: none;
+}

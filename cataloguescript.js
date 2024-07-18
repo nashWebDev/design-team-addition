@@ -41,7 +41,6 @@ var booksArray = [
     }]
 
 
-
     function listArray(book) {
         var h4 = document.createElement("h4");
         h4.classList.add("bookTitle");
@@ -51,12 +50,16 @@ var booksArray = [
         catalogueBox.classList.add("grayoverlay")
     
         var a = document.createElement("a");
+        var imAge = document.createElement("img")
     
         a.href = "form.htm";
     
-        a.style.backgroundImage = `url(${book.image})`;
+        imAge.src = book.image;
+
+        // linear-gradient( 180deg, rgb(0, 0, 255 ,0) , rgb(0, 0, 0 ,0.8)),
     
-        a.appendChild(h4);
+        a.appendChild(imAge);
+        a.appendChild(h4)
         catalogueBox.appendChild(a);
     
         a.addEventListener("click", function(event) {
@@ -74,7 +77,7 @@ var booksArray = [
             setTimeout(function() {
                 window.location.href = 'applicationForm.htm'; // Navigate to the new page after the transition
             }, 500);
-            
+
         });
     }
     
@@ -85,7 +88,8 @@ var booksArray = [
         //rollout()
 
        // setTimeout(rollout, 2500);
-       
+                   console.log(booksArray);  // Check the structure and content of booksArray
+
     });
     
     function fullsearch() {

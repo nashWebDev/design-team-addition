@@ -50,16 +50,25 @@ var booksArray = [
         catalogueBox.classList.add("grayoverlay")
     
         var a = document.createElement("a");
-        var imAge = document.createElement("img")
-    
         a.href = "catalogue.htm";
-    
+
+        var imAge = document.createElement("img")
         imAge.src = book.image;
 
-        // linear-gradient( 180deg, rgb(0, 0, 255 ,0) , rgb(0, 0, 0 ,0.8)),
+        var div = document.createElement("div")
+
+        var detailsBtn = document.createElement("button")
+        detailsBtn.innerHTML = "Details"
+
+        var RentBtn = document.createElement("button")
+        RentBtn.innerHTML = "Rent Book"
+
     
         a.appendChild(imAge);
         a.appendChild(h4)
+        a.append(div)
+        div.appendChild(detailsBtn)
+        div.appendChild(RentBtn)
         catalogueBox.appendChild(a);
     
         a.addEventListener("click", function(event) {

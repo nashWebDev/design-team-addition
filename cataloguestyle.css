@@ -13,7 +13,7 @@
   }
 
   body{
-    background: url(img/BGCAppBackground3.jpg);
+    background: url(img/DSC_0159.png);
     background-size: cover;
     margin: 0px;
   }
@@ -234,16 +234,15 @@ a{
   box-shadow: 0 2px 2px 3px black;
 }
 
-.rentbtn{
-  
+.rentbtn {
   display: none;
   transition: 1s ease;
 }
 
-
-.bookinfo:hover .rentbtn{
+.bookinfo:hover .rentbtn {
   display: block;
 }
+
 
 
 /* .catalogue a h4{

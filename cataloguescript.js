@@ -52,7 +52,7 @@ var booksArray = [
         var a = document.createElement("a");
         var imAge = document.createElement("img")
     
-        a.href = "form.htm";
+        a.href = "catalogue.htm";
     
         imAge.src = book.image;
 
@@ -75,7 +75,7 @@ var booksArray = [
             document.body.style.opacity = 0; // Start the transition immediately
             
             setTimeout(function() {
-                window.location.href = 'applicationForm.htm'; // Navigate to the new page after the transition
+                window.location.href = 'bookViewingPage.htm'; // Navigate to the new page after the transition
             }, 500);
 
         });

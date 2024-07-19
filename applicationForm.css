@@ -1,8 +1,8 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap');
+
 @font-face {
-  font-family: 'AbhayaLibre';
-  src: url('fonts/AbhayaLibre-Bold.woff2') format('woff2'),
-       url('fonts/AbhayaLibre-Bold.woff') format('woff'),
-       url('fonts/AbhayaLibre-Bold.ttf') format('truetype');
+    font-family: 'CustomFont';
+    src: url('img/AbhayaLibre-Bold.ttf') format('woff2');
   font-weight: bold;
   font-style: normal;
 }
@@ -13,50 +13,78 @@
     --bereagray:#6D6E71;
   }
 
-body{
-  scroll-behavior: smooth;
-  background: linear-gradient(to bottom, rgba(87, 87, 88, 0.377), rgba(18, 18, 19, 0.377)), 
-                url('img/DSC_0021-min.jpg'); 
-  background-size: cover;
-  background-repeat: no-repeat;
-  background-attachment: fixed;
-    padding: 0;
-    margin: 0;
-    margin-bottom: 10px;
-    overflow-x: hidden;
-    animation: faze1;
-    animation-duration: 3s;
-    animation-delay: 0s;
-    animation-iteration-count: 1;
-    animation-fill-mode: forwards; 
-    
-}
-@keyframes faze1 {
-  from {
-      opacity: 0;
-    }
-    to {
-      opacity: 1;
-    }
+*{
+  font-family: "Montserrat", sans-serif;
 }
 
+body{
+    background: url(img/BGCAppBackground3.jpg);
+    background-size: cover;
+    margin: 0px;
+  }
+
+/* header */
 header{
-    display: flex;
-    padding: 5px;
-    border: 2px solid black;
+    margin: 0px;
+    width: 100%;
     background-color: var(--Bereablue);
-    color: whitesmoke;
-    font-family: "AbhayaLibre", sans-serif;
-    font-optical-sizing: auto;
-    font-weight: bold 700;
-    font-style: normal;
-    text-align: center;
-    justify-content: center;
-    font-family: "Montserrat", sans-serif;
-    font-optical-sizing: auto;
-    font-weight: 600;
-    font-style: normal;
+    color: #ffffff;
+
+
 }
+ header h1{
+    font-family: "CustomFont" , sans-serif;
+} 
+
+header a{
+      transition: transform 1s ease;
+}
+
+header a:hover {
+  transform: translateY(-10px);
+  text-decoration: none;
+}
+.logo  {
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+}
+
+.logo img{
+    clip-path: circle();
+    width: 80px;
+    height: 80px;
+}
+
+.centerbox{
+    display: flex;
+    align-items: center;
+    margin-left: 25%;
+    margin-right: 25%;
+    width: 50%;
+}
+.centerbox h1{
+    width: fit-content;
+}
+
+.centerbox nav{
+    width: 100%;
+    display: flex;
+    justify-content: flex-end;
+}
+.centerbox nav a{
+    padding: 5px;
+    margin: 5px;
+    text-decoration: none;
+    color: white;
+
+}
+
+.booktitleContainer{
+  width: 100%;
+  text-align: center;
+}
+
 #stateofBook{
   margin: 5px;
   display: flex;

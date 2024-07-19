@@ -211,7 +211,10 @@ a{
   bottom: -100%;
 } */
 
-
+.line{
+  border-left: 3px solid white;
+  padding-left: 5px;
+}
 footer{
  
   background-color: var(--Bereablue);

@@ -1,0 +1,198 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap');
+
+@font-face {
+    font-family: 'CustomFont';
+    src: url('img/AbhayaLibre-Bold.ttf') format('woff2');
+  font-weight: bold;
+  font-style: normal;
+}
+:root {
+    --Bereablue: #27348b;
+    --white: #ffffff;
+    --bereagray:#6D6E71;
+  }
+
+body{
+    background: url(img/BGCAppBackground3.jpg);
+    background-size: cover;
+    margin: 0px;
+  }
+
+
+  *{
+    font-family: "Montserrat", sans-serif;
+  }
+
+/* header */
+header{
+    margin: 0px;
+    width: 100%;
+    background-color: var(--Bereablue);
+    color: #ffffff;
+
+
+}
+header h1{
+    font-family: "CustomFont" , sans-serif;
+}
+
+header a{
+      transition: transform 1s ease;
+}
+
+header a:hover {
+  transform: translateY(-10px);
+  text-decoration: none;
+}
+.logo  {
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+}
+
+.logo img{
+    clip-path: circle();
+    width: 80px;
+    height: 80px;
+}
+
+.centerbox{
+    display: flex;
+    align-items: center;
+    margin-left: 25%;
+    margin-right: 25%;
+    width: 50%;
+}
+.centerbox h1{
+    width: fit-content;
+}
+
+.centerbox nav{
+    width: 100%;
+    display: flex;
+    justify-content: flex-end;
+}
+.centerbox nav a{
+    padding: 5px;
+    margin: 5px;
+    text-decoration: none;
+    color: white;
+
+}
+
+/* contentbox */
+.contentbox{
+    display: flex;
+    flex-wrap: wrap;
+    width: 100%;
+    justify-content: center;
+    align-items: center;
+}
+
+.contentbox button{
+    width: 90%;
+    text-align: center;
+    border-radius: 0px;
+    border: none;
+    padding: 5px;
+    transition: 1s ease-in-out;
+}
+
+.contentbox button:hover{
+     box-shadow: /*inset rgba(60, 70, 85, 0.5) 0px 0px 40px 0px, inset rgba(255, 255, 255, 0.7) 0px 0px 40px 0px, inset rgb(255, 255, 255) 0px 0px 36px -24px, */
+     rgba(0, 102, 255, 0.5) 0px 0px 40px 0px,inset rgb(255, 255, 255) 0px 0px 36px -24px;
+    width: 60%;    
+}
+
+.contentbox button:active{
+    box-shadow: rgba(120, 170, 245, 0.5) 0px 0px 40px 0px,  rgba(156, 168, 185, 0.5) 0px 0px 40px 0px,  rgb(255, 255, 255) 0px 0px 36px -24px;;;
+    
+}
+
+.bookbox{
+    margin: 5%;
+    padding: 5%;
+    box-shadow: 3px 2px 2px 1px black;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
+    height: 50%;
+    background: rgba( 0 ,0 ,0, 0.5);
+    
+    
+    width: 100%;
+}
+
+section{
+    display: flex;
+    color: white;
+    justify-content: center;
+    align-items: center;
+    width: 50%;
+}
+section img{
+    width: 20vw;  
+    height: 60vh;
+}
+
+#s1{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    flex: 1;
+    
+}
+#s1 a{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    text-decoration: none;
+    transition: 1s;
+}
+
+#s1 a:active{
+    text-decoration: none;
+    font-weight: 900;
+}
+
+
+article{
+    text-align: center;
+    line-height: 2rem;
+}
+
+
+/* footer */
+
+.line{
+    border-left: 3px solid white;
+    padding-left: 5px;
+  }
+
+footer{
+ 
+    background-color: var(--Bereablue);
+    margin-top: 10px;
+    color: var(--white);
+    display: flex;
+    padding: 10px;
+    font-family: "Montserrat", sans-serif;
+    font-optical-sizing: auto;
+    font-weight: 600;
+    font-style: normal;
+  
+  
+  }
+  
+  footer a{
+      transition: transform 0.5s ease;
+  }
+  
+  footer a:hover {
+  transform: translateY(-10px);
+  text-decoration: none;
+  }

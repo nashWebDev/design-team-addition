@@ -26,8 +26,6 @@ document.addEventListener("DOMContentLoaded",function(){ //LOADS INFO FROM LOGIN
     }
     console.log(bookTITLE.cover)
 
-    document.querySelector("img").src = bookTITLE.cover;
-    document.querySelector("img").alt = bookTITLE.title;
 
 })
 

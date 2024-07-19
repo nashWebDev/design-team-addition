@@ -12,10 +12,20 @@
     --bereagray:#6D6E71;
   }
 
+  body{
+    background: url(img/BGCAppBackground3.jpg);
+    background-size: cover;
+    margin: 0px;
+  }
 
+*{
+  font-family: "Montserrat", sans-serif;
+
+}
 
 h1{
   text-align: center;
+  color: white;
 }
 
 a{
@@ -136,7 +146,7 @@ a{
 
 
 
-.catalogue a {
+.bookinfo {
   text-decoration: none;
   color: black;
   display: flex;
@@ -144,7 +154,8 @@ a{
   align-items: center ;
   justify-content: center;
   position: relative;
-  background-size: contain;
+  background: linear-gradient( 180deg, rgb(0, 0, 0) , rgba(85, 88, 88, 0.9)),url(img/Pattern.png);
+  background-size: cover;
   border: 1px solid black;
   /* border-radius: 20px; */
   padding: 5px;
@@ -159,14 +170,14 @@ a{
   
 }
 
-.catalogue a img{
+.bookinfo img{
   width: 30vh;
   height: 40vh;
 }
 
 
 
-.catalogue a::before {
+.bookinfo::before {
   content: '';
   position: absolute;
   top: 0;
@@ -182,26 +193,58 @@ a{
 
 
 
-.catalogue a:hover{
+.bookinfo:hover{
   background-color: black;
   box-shadow: 0 5px 5px 5px black , 2px 2px 2px 2px gray;
 }
 
-.catalogue h4 {
-
+.bookinfo h4 {
   z-index: 1000;
-
   text-align: center;
   width: 100%;
-
   height: 100%;
   
   color: white; /* Adjust color for better visibility */
   background: rgba(0, 0, 0, 0.5); /* Optional: Add background for better readability */
-  padding: 5px; /* Optional: Add padding for better readability */
+  padding: 1px; /* Optional: Add padding for better readability */
   border-radius: 0px; /* Optional: Add border radius for better aesthetics */
+  margin: 5px;
 
 }
+
+.btnbox{
+  display: flex;
+  margin: 0px;
+  width: 100%;
+  justify-content: center;
+  align-items: center;
+  transition: 1s ease;
+
+}
+
+.btnbox button{
+  border: none;
+  padding: 5px;
+  margin: 1px;
+  font-weight: 400;
+  transition: 0.3s ease-in-out;
+}
+
+.btnbox button:hover{
+  box-shadow: 0 2px 2px 3px black;
+}
+
+.rentbtn{
+  
+  display: none;
+  transition: 1s ease;
+}
+
+
+.bookinfo:hover .rentbtn{
+  display: block;
+}
+
 
 /* .catalogue a h4{
   transition: 1s;

@@ -49,46 +49,54 @@ var booksArray = [
         var catalogueBox = document.getElementById("catalogue");
         catalogueBox.classList.add("grayoverlay")
     
-        var a = document.createElement("a");
-        a.href = "catalogue.htm";
+        var bookInfo = document.createElement("div");
+        bookInfo.classList.add("bookinfo")
 
         var imAge = document.createElement("img")
         imAge.src = book.image;
 
         var div = document.createElement("div")
+        div.classList.add("btnbox")
 
-        var detailsBtn = document.createElement("button")
-        detailsBtn.innerHTML = "Details"
-
-        var RentBtn = document.createElement("button")
-        RentBtn.innerHTML = "Rent Book"
+        var detailsBtn = document.createElement("button");
+            detailsBtn.innerHTML = "Details";
+            detailsBtn.addEventListener("click", function() {
+                sendIt(h4.innerHTML, book.image, "bookViewingPage.htm");
+            });
+        
+            var RentBtn = document.createElement("button");
+            RentBtn.innerHTML = "Rent Book";
+            RentBtn.classList.add("rentbtn")
+            RentBtn.addEventListener("click", function() {
+                sendIt(h4.innerHTML, book.image, "applicationForm.htm");
+            });
 
     
-        a.appendChild(imAge);
-        a.appendChild(h4)
-        a.append(div)
+        bookInfo.appendChild(imAge);
+        bookInfo.appendChild(h4)
+        bookInfo.append(div)
         div.appendChild(detailsBtn)
         div.appendChild(RentBtn)
-        catalogueBox.appendChild(a);
+        catalogueBox.appendChild(bookInfo);
+
+
     
-        a.addEventListener("click", function(event) {
-            event.preventDefault();
-            var bookTitle = h4.innerHTML;
-            var bookcover = book.image
-            var bookingSystemTitles = { "title": bookTitle , "cover":bookcover };
-            console.log(bookingSystemTitles);
-            localStorage.setItem("booktitle", JSON.stringify(bookingSystemTitles));
-
-
-            document.body.style.transition = "opacity 0.5s"; // Set the transition property
-            document.body.style.opacity = 0; // Start the transition immediately
-            
-            setTimeout(function() {
-                window.location.href = 'bookViewingPage.htm'; // Navigate to the new page after the transition
-            }, 500);
-
-        });
+        
     }
+
+function sendIt(title, image, location) {
+        var bookingSystemTitles = { "title": title, "cover": image };
+        console.log(bookingSystemTitles);
+        localStorage.setItem("booktitle", JSON.stringify(bookingSystemTitles));
+    
+        document.body.style.transition = "opacity 0.5s"; // Set the transition property
+        document.body.style.opacity = 0; // Start the transition immediately
+    
+        setTimeout(function() {
+            window.location.href = location;
+        }, 500); // Wait for the transition to complete before changing the location
+    }
+
     
     document.addEventListener("DOMContentLoaded", function() {
         booksArray.forEach(function(book) {

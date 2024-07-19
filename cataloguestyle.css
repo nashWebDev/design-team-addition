@@ -154,7 +154,7 @@ a{
   align-items: center ;
   justify-content: center;
   position: relative;
-  background: linear-gradient( 180deg, rgb(0, 0, 0) , rgba(85, 88, 88, 0.9)),url(img/Pattern.png);
+  background: linear-gradient( 180deg, rgb(0, 0, 0) , rgba(15, 15, 15, 0.9)),url(img/Pattern.png);
   background-size: cover;
   border: 1px solid black;
   /* border-radius: 20px; */

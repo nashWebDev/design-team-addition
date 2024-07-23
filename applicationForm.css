@@ -1,285 +1,738 @@
-@import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap'); 
 
-@font-face {
-    font-family: 'CustomFont';
-    src: url('img/AbhayaLibre-Bold.ttf') format('woff2');
-  font-weight: bold;
-  font-style: normal;
-}
+ 
 
-:root {
-    --Bereablue: #27348b;
-    --white: #ffffff;
-    --bereagray:#6D6E71;
-  }
+@font-face { 
 
-*{
-  font-family: "Montserrat", sans-serif;
-}
+    font-family: 'CustomFont'; 
 
-body{
-    background: url(DSC_0159.png);
-    background-size: cover;
-    margin: 0px;
-  }
+    src: url('img/AbhayaLibre-Bold.ttf') format('woff2'); 
 
-/* header */
-header{
-    margin: 0px;
-    width: 100%;
-    background-color: var(--Bereablue);
-    color: #ffffff;
+  font-weight: bold; 
 
+  font-style: normal; 
 
-}
- header h1{
-    font-family: "CustomFont" , sans-serif;
 } 
 
-header a{
-      transition: transform 1s ease;
-}
-
-header a:hover {
-  transform: translateY(-10px);
-  text-decoration: none;
-}
-.logo  {
-    display: flex;
-    justify-content: flex-start;
-    align-items: center;
-}
-
-.logo img{
-    clip-path: circle();
-    width: 80px;
-    height: 80px;
-}
-
-.centerbox{
-    display: flex;
-    align-items: center;
-    margin-left: 25%;
-    margin-right: 25%;
-    width: 50%;
-}
-.centerbox h1{
-    width: fit-content;
-}
-
-.centerbox nav{
-    width: 100%;
-    display: flex;
-    justify-content: flex-end;
-}
-.centerbox nav a{
-    padding: 5px;
-    margin: 5px;
-    text-decoration: none;
-    color: white;
-
-}
-
-.booktitleContainer{
-  width: 100%;
-  text-align: center;
-  color: white;
  
+
+:root { 
+
+    --Bereablue: #27348b; 
+
+    --white: #ffffff; 
+
+    --bereagray:#6D6E71; 
+
+  } 
+
+ 
+
+*{ 
+
+  font-family: "Montserrat", sans-serif; 
+
+} 
+
+ 
+
+body{ 
+
+    background: url(img/DSC_0159.png); 
+
+    background-size: cover; 
+
+    margin: 0px; 
+
+  } 
+
+ 
+
+/* header */ 
+
+header{ 
+
+    margin: 0px; 
+
+    width: 100%; 
+
+    background-color: var(--Bereablue); 
+
+    color: #ffffff; 
+
+ 
+
+ 
+
+} 
+
+ header h1{ 
+
+    font-family: "CustomFont" , sans-serif; 
+
+}  
+
+ 
+
+header a{ 
+
+      transition: transform 1s ease; 
+
+} 
+
+ 
+
+header a:hover { 
+
+  transform: translateY(-10px); 
+
+  text-decoration: none; 
+
+} 
+
+.logo  { 
+
+    display: flex; 
+
+    justify-content: flex-start; 
+
+    align-items: center; 
+
+} 
+
+ 
+
+.logo img{ 
+
+    clip-path: circle(); 
+
+    width: 80px; 
+
+    height: 80px; 
+
+} 
+
+ 
+
+.centerbox{ 
+
+    display: flex; 
+
+    align-items: center; 
+
+    margin-left: 25%; 
+
+    margin-right: 25%; 
+
+    width: 50%; 
+
+} 
+
+.centerbox h1{ 
+
+    width: fit-content; 
+
+} 
+
+ 
+
+.centerbox nav{ 
+
+    width: 100%; 
+
+    display: flex; 
+
+    justify-content: flex-end; 
+
+} 
+
+.centerbox nav a{ 
+
+    padding: 5px; 
+
+    margin: 5px; 
+
+    text-decoration: none; 
+
+    color: white; 
+
+ 
+
+} 
+
+
+/* contents bar */
+
+/* The sidebar menu */
+.sidebar {
+  height: 100%; /* 100% Full-height */
+  width: 0; /* 0 width - change this with JavaScript */
+  position: fixed; /* Stay in place */
+  z-index: 2000; /* Stay on top */
+  top: 0;
+  left: 0;
+  background-color: #111; /* Black*/
+  overflow-x: hidden; /* Disable horizontal scroll */
+  padding-top: 60px; /* Place content 60px from the top */
+  transition: 0.5s; /* 0.5 second transition effect to slide in the sidebar */
 }
 
-#stateofBook{
-  margin: 5px;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-    
-    width: 100%;
-    text-align: center;
-
-}
-
-.box{
-    border: 2px solid black;
-    background-color: rgba(255, 255, 255, 0.8);
-    margin: 5px;
-    padding: 5px;
-    transition: 1s;
-}
-
-
-.mainview{
-  margin-top: 7%;
-    position: relative;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    
-    width: 100%;
-    justify-content: center;
-    height: 50%;
-    
-}
-
-
-
-section h1{
-    font-size: 50px;
-    font-family: "Montserrat", sans-serif;
-    font-optical-sizing: auto;
-    font-weight: 600;
-    font-style: normal;
-    
-}
-
-
-
-.loginBox {
-    position: relative;
-    /* border: 1px solid black; */
-    box-shadow: 0 2px 2px black;
-    /* border-radius: 20px; */
-    background-color:rgba(255, 255, 255, 0.8);
-    text-align: center;
-    justify-content: center;
-    width: 100%; /* Adjust width as needed */
-    margin: auto; /* Center the login box horizontally */
-    padding: 5%;
-}
-
-.loginBox form {
-    padding: 10px;
-    margin: 5px;
-}
-.loginBox form p {
-    margin: 3px;
-    padding: 3px;
-}
-
-.loginBox input[type="text"] {
-    padding: 5px;
-    border-radius: 5px;
-    margin: 5px;
-    border: 2px solid black;
-}
-
-.btn {
-    width: 100%;
-    border: 2px solid black;
-    padding: 10px;
-    cursor: pointer;
-    text-align: center;
-    text-decoration: none;
-    outline: none;
-    color: black;
-    background-color: rgb(255, 255, 255 , 0,5);
-    border: none;
-    border-radius: 15px;
-    box-shadow: 0 9px #999;
-    position: relative;
-    bottom: -15px;
-    transition: 0.5s;
-}
-
-.btn:hover{
-  box-shadow: 0 9px var(--Bereablue);
-}
-
-.btn:active {
-  background-color: var(--Bereablue);
-  box-shadow: 0 5px #666;
-  transform: translateY(4px);
-}
-
-
-
-#begone{
+/* The sidebar links */
+.sidebar a {
+  padding: 8px 8px 8px 32px;
+  text-decoration: none;
+  font-size: 25px;
+  color: #818181;
   display: block;
+  transition: 0.3s;
 }
 
-#revealafter{
+/* When you mouse over the navigation links, change their color */
+.sidebar a:hover {
+  color: #f1f1f1;
+}
+
+/* Position and style the close button (top right corner) */
+.sidebar .closebtn {
+  position: absolute;
+  top: 0;
+  right: 25px;
+  font-size: 36px;
+  margin-left: 50px;
+}
+
+/* The button used to open the sidebar */
+.openbtn {
+  font-size: 20px;
+  cursor: pointer;
+  background-color: rgba(15, 15, 15, 0.3);
+  color: white;
+  padding: 10px 15px;
+  border: none;
+}
+
+.openbtn:hover {
+  background-color: #444;
+}
+
+/* Style page content - use this if you want to push the page content to the right when you open the side navigation */
+#main {
+  transition: margin-left .5s; /* If you want a transition effect */
+  padding: 20px;
+}
+
+/* On smaller screens, where height is less than 450px, change the style of the sidenav (less padding and a smaller font size) */
+@media screen and (max-height: 450px) {
+  .sidebar {padding-top: 15px;}
+  .sidebar a {font-size: 18px;}
+}
+
+.contents-bar{
   display: none;
 }
 
-#appStatus{
+ 
 
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    text-align: center;
-    padding: 10px;
-    margin: 5px;
-}
-#appStatus h1{
-    border: 2px solid black;
-    background-color: rgb(255, 255, 255 , 0.5);
-    box-shadow: 5px 5px 5px lightgreen;
-}
+.booktitleContainer{ 
 
-.center{
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    text-align: center;
-    padding: 10px;
-}
+  width: 100%; 
 
-.receipt{
-    border: 2px solid black;
-    background-color:rgba(255, 255, 255, 0.8);
-    width:50%;
-    padding: 5px;
-}
+  text-align: center; 
 
-#btn2 {
-    width: 50%;
-    border: 2px solid black;
-    padding: 10px;
-    cursor: pointer;
-    text-align: center;
-    text-decoration: none;
-    outline: none;
-    color: black;
-    background-color: rgb(255, 255, 255 , 0,5);
-    border: none;
-    border-radius: 15px;
-    box-shadow: 0 9px #999;
-    position: relative;
-    bottom: -15px;
-    transition: 0.5s;
-    margin-bottom: 20px;
-}
+  color: white; 
 
-#btn2:hover{
-  box-shadow: 0 9px var(--Bereablue);
-}
+  
 
-#btn2:active {
-  background-color: var(--Bereablue);
-  box-shadow: 0 5px #666;
-  transform: translateY(4px);
-}
-/* width */
-::-webkit-scrollbar {
-  width: 10px;
-}
+} 
 
-/* Track */
-::-webkit-scrollbar-track {
-  background: var(--bereagray);
-}
+ 
 
-/* Handle */
-::-webkit-scrollbar-thumb {
-  background: var(--Bereablue);
-}
+#stateofBook{ 
 
-/* Handle on hover */
-::-webkit-scrollbar-thumb:hover {
-  background: var(--Bereablue);
-}
+  margin: 5px; 
 
-@media only screen and (max-width: 500px) {
-  #s2{
-    display: none;
+  display: flex; 
+
+  justify-content: center; 
+
+  align-items: center; 
+
+     
+
+    width: 100%; 
+
+    text-align: center; 
+
+ 
+
+} 
+
+ 
+
+.box{ 
+
+    border: 2px solid black; 
+
+    background-color: rgba(255, 255, 255, 0.8); 
+
+    margin: 5px; 
+
+    padding: 5px; 
+
+    transition: 1s; 
+
+} 
+
+ 
+
+ 
+
+.mainview{ 
+
+  margin-top: 7%; 
+
+    position: relative; 
+
+    display: flex; 
+
+    align-items: center; 
+
+    justify-content: center; 
+
+     
+
+    width: 100%; 
+
+    justify-content: center; 
+
+    height: 50%; 
+
+     
+
+} 
+
+ 
+
+ 
+
+ 
+
+section h1{ 
+
+    font-size: 50px; 
+
+    font-family: "Montserrat", sans-serif; 
+
+    font-optical-sizing: auto; 
+
+    font-weight: 600; 
+
+    font-style: normal; 
+
+     
+
+} 
+
+ 
+
+main{ 
+
+   
+
+  width: 100%; 
+
+  height: 80dvh; 
+
+  display: flex; 
+
+  justify-content: center; 
+
+  align-items: center; 
+
+} 
+
+ 
+
+form { 
+
+    /* border: 1px solid black; */ 
+
+    box-shadow: 0 2px 2px black; 
+
+    /* border-radius: 20px; */ 
+
+    background-color:rgba(255, 255, 255, 0.8); 
+
+    text-align: center; 
+
+    justify-content: center; 
+
+    width: 50%; /* Adjust width as needed */ 
+
+    margin: auto; /* Center the login box horizontally */ 
+
+    padding: 5%; 
+
+} 
+
+ 
+
+ form { 
+
+    padding: 10px; 
+
+    margin: 5px; 
+
+} 
+
+ form p { 
+
+    margin: 3px; 
+
+    padding: 3px; 
+
+} 
+
+ 
+
+input[type="text"] { 
+
+    padding: 5px; 
+
+    border-radius: 5px; 
+
+    margin: 5px; 
+
+    border: 2px solid black; 
+
+} 
+
+ 
+
+.btn { 
+
+    width: 100%; 
+
+    border: 2px solid black; 
+
+    padding: 10px; 
+
+    cursor: pointer; 
+
+    text-align: center; 
+
+    text-decoration: none; 
+
+    outline: none; 
+
+    color: black; 
+
+    background-color: rgb(255, 255, 255 , 0,5); 
+
+    border: none; 
+
+    border-radius: 15px; 
+
+    /* box-shadow: 0 9px #999;  */
+
+    position: relative; 
+
+    bottom: 1%; 
+
+    transition: 0.5s; 
+
+} 
+
+ 
+
+.btn:hover{ 
+
+  box-shadow: 0 9px var(--Bereablue); 
+
+} 
+
+ 
+
+.btn:active { 
+
+  background-color: var(--Bereablue); 
+
+  box-shadow: 0 5px #666; 
+
+  transform: translateY(4px); 
+
+} 
+
+ 
+
+ 
+
+ 
+
+#begone{ 
+
+  display: block; 
+
+} 
+
+ 
+
+#revealafter{ 
+
+  display: none; 
+
+} 
+
+ 
+
+#appStatus{ 
+
+ 
+
+    display: flex; 
+
+    justify-content: center; 
+
+    align-items: center; 
+
+    text-align: center; 
+
+    padding: 10px; 
+
+    margin: 5px; 
+
+} 
+
+#appStatus h1{ 
+
+    border: 2px solid black; 
+
+    background-color: rgb(255, 255, 255 , 0.5); 
+
+    box-shadow: 5px 5px 5px lightgreen; 
+
+} 
+
+ 
+
+.center{ 
+
+    display: flex; 
+
+    justify-content: center; 
+
+    align-items: center; 
+
+    text-align: center; 
+
+    padding: 10px; 
+
+} 
+
+ 
+
+.receipt{ 
+
+    border: 2px solid black; 
+
+    background-color:rgba(255, 255, 255, 0.8); 
+
+    width:50%; 
+
+    padding: 5px; 
+
+} 
+
+ 
+
+#btn2 { 
+
+    width: 50%; 
+
+    border: 2px solid black; 
+
+    padding: 10px; 
+
+    cursor: pointer; 
+
+    text-align: center; 
+
+    text-decoration: none; 
+
+    outline: none; 
+
+    color: black; 
+
+    background-color: rgb(255, 255, 255 , 0,5); 
+
+    border: none; 
+
+    border-radius: 15px; 
+
+    /* box-shadow: 0 9px #999;  */
+
+    position: relative; 
+
+    bottom: -15px; 
+
+    transition: 0.5s; 
+
+    margin-bottom: 20px; 
+
+} 
+
+ 
+
+#btn2:hover{ 
+
+  box-shadow: 0 9px var(--Bereablue); 
+
+} 
+
+ 
+
+#btn2:active { 
+
+  background-color: var(--Bereablue); 
+
+  box-shadow: 0 5px #666; 
+
+  transform: translateY(4px); 
+
+} 
+
+/* width */ 
+
+::-webkit-scrollbar { 
+
+  width: 10px; 
+
+} 
+
+ 
+
+/* Track */ 
+
+::-webkit-scrollbar-track { 
+
+  background: var(--bereagray); 
+
+} 
+
+ 
+
+/* Handle */ 
+
+::-webkit-scrollbar-thumb { 
+
+  background: var(--Bereablue); 
+
+} 
+
+ 
+
+/* Handle on hover */ 
+
+::-webkit-scrollbar-thumb:hover { 
+
+  background: var(--Bereablue); 
+
+} 
+
+ 
+
+/* footer */ 
+
+ 
+
+.line{ 
+
+  border-left: 3px solid white; 
+
+  padding-left: 5px; 
+
+} 
+
+ 
+
+footer{ 
+
+ 
+
+  background-color: var(--Bereablue); 
+
+  margin-top: 10px; 
+
+  color: var(--white); 
+
+  display: flex; 
+
+  padding: 10px; 
+
+  font-family: "Montserrat", sans-serif; 
+
+  font-optical-sizing: auto; 
+
+  font-weight: 600; 
+
+  font-style: normal; 
+
+ 
+
+ 
+
+} 
+
+ 
+
+footer a{ 
+
+    transition: transform 0.5s ease; 
+
+} 
+
+ 
+
+footer a:hover { 
+
+transform: translateY(-10px); 
+
+text-decoration: none; 
+
+} 
+
+ 
+
+@media only screen and (max-width: 500px) { 
+
+  #s2{ 
+
+    display: none; 
+
+  } 
+
+} 
+
+@media only screen and (max-width: 750px) {
+  .logo{
+    width: 100dvw;
   }
+  .logo h3{
+    width: max-content;
+  }
+  .contents-bar{
+    display: flex;
+    width: 100%;
+   justify-content: flex-end;
+    
+  }
+  
+  .centerbox{
+    margin:0px;
+    width: 100%;
+  }
+  .centerbox nav{
+    width: 0%;
+    display: none
+  };
 }

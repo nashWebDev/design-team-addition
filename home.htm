@@ -8,21 +8,42 @@
 </head>
 <body>
     
-<header>
-    <div class="centerbox">
-        <div class="logo">
-            <img src="img\applogo_blue.png"  alt="logo">
-            <h3>Berea Group of Colleges</h3>
-        </div>
+    <!-- side bar -->
 
-            <nav>
+    <div id="mySidebar" class="sidebar">
+        <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
                 <a href="home.htm">Home</a>
                     <a href="catalogue.htm#myInput">Search</a>
                     <a href="catalogue.htm">Catalogue</a>
                     <a href="index.htm">login</a>
-            </nav>
-    </div>
-</header>
+      </div>
+      
+<!-- header -->
+
+    
+    <header>
+        <div class="centerbox">
+            <div class="logo">
+                <img src="img\applogo_blue.png"  alt="logo">
+                <h3>Berea Group of Colleges</h3>
+                
+                <div class="contents-bar">
+                    <h4><button class="openbtn" onclick="openNav()">&#9776;</button></h4>
+
+                </div>
+                
+            </div> 
+        
+    
+                <nav>
+                    <a href="home.htm">Home</a>
+                    <a href="catalogue.htm#myInput">Search</a>
+                    <a href="catalogue.htm">Catalogue</a>
+                    <a href="index.htm">login</a>
+                </nav>
+        </div>
+        
+    </header>
 
 
 <!-- hottest /carasol page -->
@@ -180,7 +201,12 @@
 
 <!-- faculity of Hospitality and Tourism -->
 
+<div style="background-image: linear-gradient( 90deg, rgb(0, 0, 0) , rgba(255, 0, 0, 0.9)), url(img/Pattern.png);">
 
+    <div class="Msidehead">
+        <img src="icons/Hospitality.png" alt="hospitality">
+        <h3>Faculty of Hospitality and Tourism</h3>
+    </div>
 
 <div class="row" style="background-image: linear-gradient( 90deg, rgb(255, 0, 0) , rgba(255, 0, 0, 0.9)), url(img/Pattern.png);">
     
@@ -203,7 +229,7 @@
         </a>
     </div>
 </div>
-
+</div>
 
 <!-- footer -->
 <footer>
